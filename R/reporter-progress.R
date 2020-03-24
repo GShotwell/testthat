@@ -37,7 +37,7 @@ ProgressReporter <- R6::R6Class("ProgressReporter",
     ctxt_name = "",
     file_name = "",
 
-    initialize = function(show_praise = TRUE,
+    initialize = function(show_praise = getOption("testthat.progress.praise", TRUE),
                           max_failures = getOption("testthat.progress.max_fails", 10L),
                           min_time = 0.1,
                           update_interval = 0.1,

@@ -23,7 +23,7 @@ SummaryReporter <- R6::R6Class("SummaryReporter",
     skips = NULL,
     warnings = NULL,
     max_reports = NULL,
-    show_praise = TRUE,
+    show_praise = getOption("testthat.summary.praise", TRUE),
     omit_dots = FALSE,
 
     initialize = function(show_praise = TRUE,
